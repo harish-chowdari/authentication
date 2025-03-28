@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import axios from "../axios";
 import { Link, useNavigate } from "react-router-dom";
+
+import axios from "../axios";
 import SecondaryLoader from "../components/SecondaryLoader";
 
 const PasswordReset = () => {
   const [login, setLogin] = useState({ email: "", otp: "", newPassword: "" });
   const [errorMessage, setErrorMessage] = useState("");
   const [isOTPSent, setIsOTPSent] = useState(false);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {

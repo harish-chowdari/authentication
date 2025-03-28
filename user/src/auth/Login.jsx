@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import axios from "../axios";
-import SecondaryLoader from "../../../admin/src/components/SecondaryLoader";
+import SecondaryLoader from "../components/SecondaryLoader";
 
 const Login = () => {
     const [login, setLogin] = useState({ email: "", password: "" });
@@ -49,7 +49,7 @@ const Login = () => {
                 <h2 className="text-2xl font-bold text-green-800 text-center mb-4">Login</h2>
 
                 {errorMessage && (
-                    <p className="text-red-00 text-sm text-center mb-3">{errorMessage}</p>
+                    <p className="text-red-00 text-red-600 text-sm text-center mb-3">{errorMessage}</p>
                 )}
 
                 <input

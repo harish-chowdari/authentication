@@ -1,11 +1,11 @@
-import React from 'react'
-import { Loader2 } from 'lucide-react'
+import React from 'react';
 
-const SecondaryLoader = ({isLoading}) => {
-    if (!isLoading) return null
+const SecondaryLoader = ({ isLoading }) => {
+    if (!isLoading) return null;
+
     return (
-        <div><Loader2 className="animate-spin w-5 h-5" /></div>
-    )
-}
+        <div className="w-5 m-[2px] h-5 border-2 border-gray-300 border-t-green-600 rounded-full animate-spin"></div>
+    );
+};
 
-export default SecondaryLoader
+export default SecondaryLoader;

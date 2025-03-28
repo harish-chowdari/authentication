@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "../axios";
 import { Link, useNavigate } from "react-router-dom";
-import { Loader2 } from "lucide-react";
+import SecondaryLoader from "../components/SecondaryLoader";
 
 const Signup = () => {
     const [signup, setSignup] = useState({
@@ -93,7 +93,7 @@ const Signup = () => {
                 className={`w-full bg-green-800 ${isLoading ? "cursor-not-allowed opacity-70" : "cursor-pointer"} text-white py-2 flex items-center justify-center rounded hover:bg-green-700 transition-all`}
             >
                 {isLoading ? "" : "Signup"}{" "}
-                {isLoading && <Loader2 className="animate-spin w-5 h-5" />}
+                <SecondaryLoader isLoading={isLoading} />
             </button>
 
             <p className="mt-4 text-center text-green-700">

@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
 import axios from "../axios";
-import { Loader2 } from "lucide-react";
+import SecondaryLoader from "../components/SecondaryLoader";
 
 const PasswordReset = () => {
     const [login, setLogin] = useState({ email: "", otp: "", newPassword: "" });
@@ -99,7 +99,10 @@ const PasswordReset = () => {
                     }`}
                     disabled={isLoading}
                 >
-                    {isOTPSent ? isLoading ? <Loader2 className="animate-spin w-5 h-5" /> : "Reset Password" : isLoading ? <Loader2 className="animate-spin w-5 h-5" /> : "Send OTP"}
+                    {isOTPSent ? isLoading ? 
+                        <SecondaryLoader isLoading={isLoading} /> : "Reset Password" : isLoading ? 
+                        <SecondaryLoader isLoading={isLoading} /> : "Send OTP"
+                    }
                 </button>
 
                 <p className="mt-4 text-green-700">
