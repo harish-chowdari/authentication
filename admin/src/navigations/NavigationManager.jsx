@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { authRoutes } from './authRoutes'
 import { restrictedRoutes } from './restrictedRoutes'
 
@@ -9,7 +9,7 @@ const NavigationManager = () => {
             {
                 authRoutes?.map((route, index) => {
                     return (
-                        <route.element key={index} path={route.path} element={route.element} />
+                        <Route key={index} path={route.path} element={route.element} />
                     )
                 })
             }
@@ -17,7 +17,7 @@ const NavigationManager = () => {
             {
                 restrictedRoutes?.map((route, index) => {
                     return (
-                        <route.element key={index} path={route.path} element={route.element} />
+                        <Route key={index} path={route.path} element={route.element} />
                     )
                 })
             }

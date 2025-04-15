@@ -96,7 +96,7 @@ const Signup = () => {
                 {isLoading ? "" : "Signup"}{" "}
                 <SecondaryLoader isLoading={isLoading} />
             </button>
-
+ 
             <p className="mt-4 text-center text-green-700">
                 Already have an account?{" "}
                 <Link to={ROUTES.LOGIN} className="text-green-600 hover:underline">
