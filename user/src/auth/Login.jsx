@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Routes, useNavigate } from "react-router-dom";
 
 import axios from "../axios";
 import SecondaryLoader from "../components/SecondaryLoader";
+import ROUTES from "../navigations/routes";
 
 const Login = () => {
     const [login, setLogin] = useState({ email: "", password: "" });
@@ -72,7 +73,7 @@ const Login = () => {
 
                 <p className="text-sm text-green-700 text-center mb-3">
                     Forgot password? Update{" "}
-                    <Link to="/reset" className="text-green-600 hover:underline"> here </Link>
+                    <Link to={ROUTES.PASSWORD_RESET} className="text-green-600 hover:underline"> here </Link>
                 </p>
 
                 <button
@@ -85,7 +86,7 @@ const Login = () => {
 
                 <p className="mt-4 text-center text-green-700">
                     Don't have an account?{" "}
-                    <Link to="/signup" className="text-green-600 hover:underline">
+                    <Link to={Routes.SIGNUP} className="text-green-600 hover:underline">
                     Signup
                     </Link>
                 </p>

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 import axios from "../axios";
 import SecondaryLoader from "../components/SecondaryLoader";
+import ROUTES from "../navigations/routes";
 
 const PasswordReset = () => {
     const [login, setLogin] = useState({ email: "", otp: "", newPassword: "" });
@@ -107,7 +108,7 @@ const PasswordReset = () => {
 
                 <p className="mt-4 text-green-700">
                     Remember your password?{" "}
-                    <Link to="/" className="text-green-600 hover:underline">
+                    <Link to={ROUTES.LOGIN} className="text-green-600 hover:underline">
                         Login
                     </Link>
                 </p>

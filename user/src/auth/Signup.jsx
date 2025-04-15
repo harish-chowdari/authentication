@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "../axios";
 import { Link, useNavigate } from "react-router-dom";
 import SecondaryLoader from "../components/SecondaryLoader";
+import ROUTES from "../navigations/routes";
 
 const Signup = () => {
     const [signup, setSignup] = useState({
@@ -98,8 +99,8 @@ const Signup = () => {
 
             <p className="mt-4 text-center text-green-700">
                 Already have an account?{" "}
-                <Link to="/" className="text-green-600 hover:underline">
-                Login
+                <Link to={ROUTES.LOGIN} className="text-green-600 hover:underline">
+                    Login
                 </Link>
             </p>
             </form>
