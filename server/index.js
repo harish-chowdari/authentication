@@ -12,9 +12,9 @@ app.use(express.urlencoded({extended: true}))
 require("./db")
 
 const AuthRoutes = require("./Routes/AuthRoutes") 
-app.use("/api", AuthRoutes)
- 
 const OtpRouter = require("./Routes/OtpRoutes") 
+
+app.use("/api", AuthRoutes)
 app.use("/api", OtpRouter)
 
 const port = process.env.PORT || 3000
@@ -22,5 +22,5 @@ const port = process.env.PORT || 3000
  
 app.listen(port, () => {
     console.log(`Server is running on port:${port}`);
-  });
+});
 
